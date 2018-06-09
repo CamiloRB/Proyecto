@@ -1,0 +1,138 @@
+<header>
+	<nav class="light-blue lighten-1" role="navigation">
+		<div class="nav-wrapper container">
+
+			<a id="logo-container" href="#" class="brand-logo hide-on-med-and-down">TEXTIL.COM</a>
+			<ul id="nav-mobile" class="right">
+				<li><a href="index.html"><i class="material-icons left">highlight_off</i>Cerrar</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<!--fin de la cabezera-->
+
+<!--seccion principal-->
+<section>
+	<!--cabezera de la sesion principal-->
+	<header>
+		<div class="section no-pad-bot" id="index-banner">
+			<div class="container">
+				<h1 class="header center blue-text text-lighten-1 ">Textiles.com</h1>
+				<div class=" center">
+				<h5 class="header center "> </h5>
+				</div>
+				<br><br>
+			</div>
+		</div>
+	</header>
+	<!--fin de la cabezera sesion principal-->
+
+<h4 class="header center ">CREAR USUARIO</h4>
+		<article>
+		<div class="container">
+		<div class="section">		
+      		 <form >
+      		 	<div class="row">
+				<div class="input-field col l5 s12">
+					  <i class="material-icons prefix">local_offer</i>
+					  <input  type="text" class="validate" ng-model="nuevacompraa.identityusu">
+			          <label >id</label>
+			          
+				</div>
+				</div>
+				<div class="row">
+				<div class="input-field col l5 s12">
+					<i class="material-icons prefix">mode_edit</i>
+					<input  type="text" class="validate" ng-model="nuevacompraa.cc">
+			        <label >Cedula</label>  
+				</div>
+				<div class="col l2 s12"></div>
+				<div class="input-field col l5 s12">
+		           <select class="browser-default" ng-model="nuevacompraa.rolusuario">
+				      <option value="" disabled selected>Rol</option>
+				      <option value="Admin">Admin</option>
+				      <option value="Analista">Analista</option>
+				      <option value="Vendedor">Vendedor</option>					    </select>
+
+				</div>
+				</div>
+
+				<div class="row">
+				<div class="input-field col l5 s12">
+					<i class="material-icons prefix">account_circle</i>
+					 <input  type="text" class="validate" ng-model="nuevacompraa.nombre">
+			         <label >Nombre</label>  
+			          
+				</div>
+				<div class="col l2 s12"></div>
+
+				<div class="input-field col l5 s12">
+					<i class="material-icons prefix">local_offer</i>
+					  <input  id="nombreProd" type="text" class="validate" ng-model="nuevacompraa.username">
+			          <label for="nombreProd">Nombre usuario</label>
+				</div>
+				</div>
+
+				<div class="row">
+				<div class="input-field col l5 s12">
+					<i class="material-icons prefix">vpn_key</i>					
+			         <input  id="precio" type="password" class="validate" ng-model="nuevacompraa.userpass">
+			          <label for="precio">Contraseña</label>
+			           
+				</div>
+				<div class="col l2 s12"></div>
+
+				<!--<div class="input-field col l5 s12">
+					  <i class="material-icons prefix">vpn_key</i>
+					  <input  id="descripcion" type="password" class="validate">
+			          <label for="descripcion">Confirmar contraseña</label>
+				</div>-->
+				</div>
+
+				<div class="row " >
+				<div class="input-field col l2 s8 right">
+					<a class="waves-effect blue btn" ng-click="addPost()">Crear</a>
+				</div>
+				<div class="input-field col l2 s8 right">
+					<a class="waves-effect blue btn" ng-click="addPut()">Actualizar</a>
+				</div>
+				</div>
+			</form>
+		</div>						
+		</div>
+		</article>
+
+		<br><br>
+
+		<div class="container center">
+		<table class="responsive-table striped highlight col s12">
+        <thead>
+          <tr class="center">
+              <th>ID</th>
+              <th>CC</th>
+              <th>Nombre</th>
+              <th>rol</th>
+              <th>Username</th>
+              <th>Contraseña</th>
+              <th>Contraseña</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="compra in compraa">
+	            <td>{{compra.identityusu}}</td>
+	            <td>{{compra.cc}}</td>
+	            <td>{{compra.nombre}}</td>
+	            <td>{{compra.rolusuario}}</td>
+	            <td>{{compra.username}}</td>
+	            <td>{{compra.userpass}}</td>
+	            <td><a class="waves-effect blue btn" ng-click="configurar(compra)">Editar</a></td>
+          </tr>
+        </tbody>
+		</table>
+		</div>
+		
+		<br>
+		<br>		
+
+	<!--fin de la seccion principal-->

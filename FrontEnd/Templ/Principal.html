@@ -1,0 +1,68 @@
+<header>
+	<nav class="light-blue lighten-1" role="navigation">
+		<div class="nav-wrapper container">
+
+			<a id="logo-container" href="#" class="brand-logo hide-on-med-and-down">TEXTIL.COM</a>
+			<ul id="nav-mobile" class="right">
+				<li><a href="#!registroCompras"><i class="material-icons left">add_shopping_cart</i>Compras</a></li>
+				<li><a href="index.html"><i class="material-icons left">highlight_off</i>Cerrar</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<!--fin de la cabezera-->
+
+<!--seccion principal-->
+<section>
+	<!--cabezera de la sesion principal-->
+	<header>
+		<div class="section no-pad-bot" id="index-banner">
+			<div class="container">
+				<h1 class="header center blue-text text-lighten-1 ">Lista de Productos</h1>
+				<div class=" center">
+				<h5 class="header center "> </h5>
+				</div>
+				<br><br>
+			</div>
+		</div>
+	</header>
+	<!--fin de la cabezera sesion principal-->
+<article>
+<div class="container">
+
+				<table class="responsive-table striped highlight col s12">
+		        <thead>
+		          <tr>
+		          	  <th class="center"></th>
+		              <th class="center"></th>
+		          </tr>
+		        </thead>
+
+		        <tbody>
+		          <tr class="center" ng-repeat="compra in compraa">
+		          		<td><img src="image/Imagen.jpg"  class="responsive-img center">
+		          		</td>
+			            <td class="container col l6 s12"><p class="center"><b>{{compra.nombreproducto}}</b></p>
+			            	<br>
+			            	{{compra.presentacion}}
+			            	<br>
+			            	<br>
+			            	<p class="center">
+			            		<b>Cantidad: </b>{{compra.cantidad}}
+			            		<br>
+			            		<br>
+			            		<b>Precio: </b>{{compra.precio}}
+			            		<br>
+			            		<br>
+			            		<a class="waves-effect blue btn" ng-click="Aderir(compra)">agregar</a>
+			            	</p>
+			            </td>
+			            <!--<td class="center"><button class="waves-effect blue btn">agregar</button></td>-->
+		          </tr>
+		        </tbody>
+				</table>
+
+			</div>
+
+		</article>
+		<!--fin articulo de la segunda fila-->

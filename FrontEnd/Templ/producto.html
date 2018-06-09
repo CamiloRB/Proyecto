@@ -1,0 +1,139 @@
+<header>
+	<nav class="light-blue lighten-1" role="navigation">
+		<div class="nav-wrapper container">
+
+			<a id="logo-container" href="#" class="brand-logo hide-on-med-and-down">TEXTIL.COM</a>
+			<ul id="nav-mobile" class="right">
+				<li><a href="#!registrarProveedor"><i class="material-icons left">assignment_ind</i>Proveedor</a></li>
+				<li><a href="index.html"><i class="material-icons left">highlight_off</i>Cerrar</a></li>
+				<!--<li><a class="dropdowm-trigger" data-target="dropdown1" href="#"><i class="material-icons left">menu</i>Menu</a></li>-->
+			</ul>
+		</div>
+	</nav>
+</header>
+<!--fin de la cabezera-->
+
+<!--seccion principal-->
+<section>
+	<!--cabezera de la sesion principal-->
+	<header>
+		<div class="section no-pad-bot" id="index-banner">
+			<div class="container">
+				<h1 class="header center blue-text text-lighten-1 ">Textiles.com</h1>
+				<div class=" center">
+				<h5 class="header center "> </h5>
+				</div>
+				<br><br>
+			</div>
+		</div>
+	</header>
+	<!--fin de la cabezera sesion principal-->
+
+<h4 class="header center ">PRODUCTOS</h4>
+		<article>
+		<div class="container">
+		<div class="section">		
+      		 <form >
+      		 	<div class="row">
+				<div class="input-field col l5 s12">
+					 <i class="material-icons prefix">mode_edit</i>
+					 <input  id="idProduc" type="text" class="validate" ng-model="rProducto.identityprod">
+			         <label for="idProduc">ID producto</label> 
+			         <span class="helper-text" data-error="wrong" data-success="">Helper text</span>
+				</div>
+				<div class="col l2 s12"></div>
+
+				<div class="input-field col l5 s12">
+					<i class="material-icons prefix">mode_edit</i>
+					 <input  id="idProvee" type="text" class="validate" ng-model="rProducto.proveedor_identityprov">
+			         <label for="idProvee">Id Proveedor</label> 
+			         <span class="helper-text" data-error="wrong" data-success="">Helper text</span>
+				</div>
+				</div>
+
+				<div class="row">
+				<div class="input-field col l5 s12">
+					  <i class="material-icons prefix">local_offer</i>
+					  <input  id="nombreProd" type="text" class="validate" ng-model="rProducto.nombreproducto">
+			          <label for="nombreProd">Nombre Producto</label>
+			          <span class="helper-text" data-error="wrong" data-success="">Helper text</span>
+				</div>
+				<div class="col l2 s12"></div>
+
+				<div class="input-field col l5 s12">
+					<i class="material-icons prefix">mode_edit</i>
+					<input  id="idProduc" type="text" class="validate" ng-model="rProducto.cantidad">
+			        <label for="idProduc">cantidad</label>
+			        <span class="helper-text" data-error="wrong" data-success="">Helper text</span>  
+				</div>
+				</div>
+
+				<div class="row">
+				<div class="input-field col l5 s12">
+					<i class="material-icons prefix">attach_money</i>					
+			         <input  id="precio" type="text" class="validate" ng-model="rProducto.precio">
+			          <label for="precio">precio</label>
+			           <span class="helper-text" data-error="wrong" data-success="">Helper text</span>
+				</div>
+				<div class="col l2 s12"></div>
+
+				<div class="input-field col l5 s12">
+					  <i class="material-icons prefix">comment</i>
+					  <input  id="descripcion" type="text" class="validate" ng-model="rProducto.presentacion">
+			          <label for="descripcion">descripcion</label>
+			          <span class="helper-text" data-error="wrong" data-success="">Helper text</span>
+				</div>
+				<div class="col l12 s12"></div>
+				</div>
+
+				<div class="row " >
+	 			<div class="input-field col l2 s8 right">
+					 <a class="waves-effect blue btn" ng-click="addPut()">Modificar</a>   
+				</div>
+				<div class="input-field col l2 s8 right">
+					<a class="waves-effect blue btn" ng-click="Registar()">Registrar</a>
+				</div>
+				</div>
+			</form>
+      		
+      	
+      		<br>
+            <!--fin formulario-->
+
+			<!--tabla de compra de los productos-->
+			<table class="responsive-table striped highlight">
+		        <thead>
+		          <tr>
+		              <th>idProd</th>
+		              <th>Nombre del Producto</th>
+		              <th>presentacion</th>
+		              <th>cantidad</th>
+		              <th>precio</th>
+		              <th>Proveedor</th>
+		              <th>Modificar</th>
+		          </tr>
+		        </thead>
+
+		        <tbody>
+		          <tr ng-repeat="produ in product">
+			            <td>{{produ.identityprod}}</td>
+			            <td>{{produ.nombreproducto}}</td>
+			            <td>{{produ.presentacion}}</td>
+			            <td>{{produ.cantidad}}</td>
+			            <td>{{produ.precio}}</td>
+			            <td>{{produ.proveedor_identityprov}}</td>
+			            <td><a class="waves-effect blue btn" ng-click="configurar(produ)">Editar</a></td>
+		          </tr>		         
+		        </tbody>
+      		</table>
+      		<br><br>
+      		<!--fin de la tabla-->
+
+  		
+
+		</div>						
+		</div>
+		</article>
+				
+
+	<!--fin de la seccion principal-->

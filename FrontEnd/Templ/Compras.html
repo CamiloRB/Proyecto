@@ -1,0 +1,122 @@
+<header>
+	<nav class="light-blue lighten-1" role="navigation">
+		<div class="nav-wrapper container">
+
+			<a id="logo-container" href="#" class="brand-logo hide-on-med-and-down">TEXTIL.COM</a>
+			<ul id="nav-mobile" class="right">
+				<li><a href="#!Vendedor"><i class="material-icons left">note_add</i>Productos</a></li>
+				<li><a href="index.html"><i class="material-icons left">highlight_off</i>Cerrar</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<!--fin de la cabezera-->
+
+<!--seccion principal-->
+<section>
+	<!--cabezera de la sesion principal-->
+	<header>
+		<div class="section no-pad-bot" id="index-banner">
+			<div class="container">
+				<h1 class="header center blue-text text-lighten-1 ">Textiles.com</h1>
+				<div class=" center">
+				<h5 class="header center "> </h5>
+				</div>
+				<br><br>
+			</div>
+		</div>
+	</header>
+	<!--fin de la cabezera sesion principal-->
+
+<article>
+<div class="container">
+<div class="section">
+
+	<!--formulario-->
+	  <form class="row">
+	    <form class="col s12 ">
+	      <div class="row">
+	       <div class="col s12">
+	       	<br>
+			</div>
+	        <div class="input-field col s5">
+	          <input  id="NomVendedor" type="text" class="validate" ng-model="cliente">
+	          <label for="NomVendedor">Nombre del Cliente</label>  
+	        </div>
+	        <!--<div class="input-field col s5">
+	          <input  id="last_name" type="text" class="validate" ng-model="nuevacompraa.userId">
+	          <label for="last_name">Descuento</label>
+	        </div>-->
+	      </div>
+	    </form>
+    </form>
+    <!--fin formulario-->
+	<!--tabla de compra de los productos-->
+	<table class="responsive-table striped highlight col s12">
+        <thead>
+          <tr>
+              <th>Codigo</th>
+              <th>Nombre del Producto</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
+              <th>Eliminar</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="compra in Carrito">
+	            <td>{{compra.identityprod}}</td>
+	            <td>{{compra.nombreproducto}}</td>
+	            <td>{{compra.cantidad}}</td>
+	            <td>{{compra.precio}}</td>
+	            <td><a class="waves-effect blue btn" ng-click="Eliminar(compra)">Eliminar</a></td>
+          </tr>
+        </tbody>
+		</table>
+		<br><br>
+
+		 <table class="responsive-table striped highlight col s12">
+        <thead>
+          <tr>
+              <th>Codigo</th>
+              <th>Nombre del Producto</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
+              <th>Eliminar</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="coa in comosea">
+	            <td>{{coa.id}}</td>
+	            <td>{{coa.idproducto}}</td>
+	            <td>{{coa.nombre}}</td>
+	            <td>{{coa.cantidad}}</td>
+	            <td><a class="waves-effect blue btn" ng-click="Eliminar(compra)">Eliminar</a></td>
+          </tr>
+        </tbody>
+		</table>
+		<br><br>
+		<!-- fin de la tabla-->
+		<div class="row">
+		<div class="input-field col l2 s2">
+	          <b><input  id="la" type="text" class="validate" ng-model="total" disabled=""></b>
+	    </div>
+	    </div>
+
+		<!--botones-->
+		<div class=" row ">
+			<div class="col s12 "> 
+  			<div class="input-field col l2 s12">
+  				<a class="waves-effect blue btn left" ng-click="Realizar()">Compra</a>      				
+  			</div>
+  			<div class="input-field col l2 s12">
+  				<a class="waves-effect blue btn left" ng-click="Limp()">Cancelar</a>      				
+  			</div>      				
+			</div>  			
+		</div>
+		<br><br>
+		<!--fin de los botones-->
+</div>						
+</div>
+</article>
